@@ -1,4 +1,5 @@
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import EditPublication from '../pages/EditPublication';
 import HomeArrendador from '../pages/HomeArrendador';
 import HomerArrendatario from '../pages/HomerArrendatario';
 import InformacionAdicional from '../pages/InformacionAdicional';
@@ -18,6 +19,7 @@ function App() {
                 <Route path="/homeArrendador" element={<HomeArrendador/>} />
                 <Route path="/mispublicacionesArrendador" element={<MisPublicacionesArrendador/>} />
                 <Route path="/masinfoarrendador" element={<InformacionAdicional/>} />
+                <Route path="/editarpublicacion" element={<EditPublication/>} />
 
 
                 <Route path="/homearrendatario" element={<HomerArrendatario/>} />

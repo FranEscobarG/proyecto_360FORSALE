@@ -1,0 +1,80 @@
+.container_editarpublicacion{
+    width: 90%;
+    padding: 1rem 0 6rem 0;
+    /* background-color: #F1F8FF; */
+}
+.containerInfoEdit {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.cuerpo_editar{ 
+    width: 50%;
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+}
+.ImgEditar {
+    width: 100%;
+    height: 100%;
+}
+.cuerpo2_editar{ 
+    width: 100%;
+    height: 30vh;
+}
+.cuerpo3_editar{ 
+    width: 100%;
+    display: flex;
+    margin-top: 4rem;
+    justify-content: center;
+}
+
+.wrapper_editar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgba(92, 174, 255, 1);
+    border-radius: .5rem;
+    background-color: #F1F8FF;
+}
+.medium{
+    margin: 0 0 1rem 1.8rem; 
+    height: 70%;
+}
+.small{
+    margin: 1rem 0 0 1.8rem; 
+    height: 30%;
+}
+.description{
+    margin: 2rem 0 1rem 0; 
+    height: 100%;
+}
+
+.buttonEditar{
+    padding: 1.3rem 0 1.3rem 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    border-radius: 15px;
+    border: rgba(92, 174, 255, 1);
+    background-color: rgba(92, 174, 255, 1);
+    width: 30%;
+}
+@media screen and (max-width:830px){
+    .container_editarpublicacion{
+        width: 100%;
+    }
+    .container{ 
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .cuerpo_editar{
+        width: 100%;
+    }
+    .buttonEditar{
+        width: 90%;
+    }
+}

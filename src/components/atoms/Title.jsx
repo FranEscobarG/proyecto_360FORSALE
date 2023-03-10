@@ -6,10 +6,14 @@ const Title = styled.h1`
     font-style: normal;
     font-weight: 700;
     font-size: 3rem;
-    line-height: 90px;
+    line-height: 5rem;
     text-align: center;
     text-transform: uppercase;
     color: #FFFFFF;
+    @media screen and (max-width:767px){
+        font-size: 1.8rem;
+        line-height: 3rem;
+    }
 `; 
 
 

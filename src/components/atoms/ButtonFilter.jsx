@@ -14,6 +14,17 @@ const StyledButtonFilter = styled.button`
     border-radius: 1rem;
     border: none;
     cursor: pointer;
+
+    @media screen and (max-width:767px){
+        width: 25%;
+        padding: .5rem .4rem .3rem;
+        font-size: 1.2rem;
+    }
+
+    @media screen and (max-width:1370px){
+        width: 25%;
+        font-size: 1.4rem;
+    }
 `;
 
 

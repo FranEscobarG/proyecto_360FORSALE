@@ -46,8 +46,9 @@ const StyledCard = styled.div`
     }
     .contenido h3{
         font-family: 'Hepta Slab';
+        font-size: 1.2rem;
         font-weight: 600;
-        margin-bottom: .5rem;
+        margin-bottom: .4rem;
     }
     .contenido .btn_editar{
         width: 92%;
@@ -89,6 +90,31 @@ const StyledCard = styled.div`
         font-size: 1.4rem;
         line-height: 1.2rem;
         text-align: justify;
+    }
+
+    @media screen and (max-width:1370px){
+        width: 35%;
+    }
+
+    @media screen and (max-width:920px){
+        width: 60%;
+    }
+
+    @media screen and (max-width:767px){
+        width: 95%;
+        .contenido h3{
+            font-size: 1rem;
+            margin-bottom: .3rem;
+        }
+        .description .price{
+            font-size: 1.3rem;
+        }
+        .description  .text_description{
+            font-family: 'Harmattan';
+            font-size: 1.2rem;
+            line-height: 1.2rem;
+            text-align: justify;
+        }
     }
 `
 
