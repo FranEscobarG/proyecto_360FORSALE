@@ -8,6 +8,7 @@ const Title = styled.h1`
     font-size: 3rem;
     line-height: 90px;
     text-align: center;
+    text-transform: uppercase;
     color: #FFFFFF;
 `; 
 

@@ -1,6 +1,6 @@
 .cover-home_arrendador{
     height: 80vh;
-    background-image: url(../img/coverHomeArrendador.png);
+    background-image: url(../img/coverHome1.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -38,4 +38,85 @@
     font-family: 'Hepta Slab';
     font-size: 1.8rem;
     color: black;
+}
+
+/* ------------------------------- */
+.container-homeSearch{
+    position: absolute;
+    bottom: 3.5%;
+    width: 80%;
+    height: 15%;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    gap: 2%;
+    border-radius: 1rem 1rem 0 0;
+    background-color: #5caeffc9;
+}
+
+.container-homeSearch .buttons{
+    width: 48%;
+    /* height: 90%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    /* background-color: aquamarine; */
+}
+
+.container-homeSearch .search{
+    width: 50%;
+    padding: .4rem 1rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: .6rem;
+    background-color: #FFFFFF;
+}
+
+.container-homeSearch .search .inputSearch{
+    width: 85%;
+    padding: .9rem .9rem .9rem 0;
+    border: none;
+    border-radius: .5rem;
+    font-size: 1rem;
+    outline: none; /* --> Quita marcos del input al seleccionarlo*/
+}
+.container-homeSearch .search .btn_search{
+    padding: .3rem .8rem .2rem;
+    margin-left: 1rem;
+    font-family: 'Harmattan';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: #2E97FF;
+    border: 2px solid #2E97FF;
+    border-radius: 1.5rem;
+    background-color: transparent;
+    transition: all .4s ease-in;
+}
+.container-homeSearch .search .btn_search:hover{
+    background-color: #2E97FF;
+    color: white;
+}
+
+.container_catalogo{
+    width: 100%;
+    padding-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.flex_catalogo{
+    min-height: 55vh;
+    width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2rem 0 5rem;
+    flex-wrap: wrap;
+    grid-gap: 5rem;
+    /* background-color: blueviolet; */
 }

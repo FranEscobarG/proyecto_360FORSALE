@@ -25,7 +25,7 @@ function Flexbox() {
 }
 
 const StyledFlexbox = styled.div`
-    min-height: 100vh;
+    min-height: 80vh;
     max-width: 80%;
     display: flex;
     align-items: center;

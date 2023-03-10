@@ -1,28 +1,46 @@
+import { useRef } from 'react';
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import {useNavigate} from 'react-router-dom';
 import styled from "styled-components";
 import Logo from '../../assets/img/logoSinFondo.png'
 import BurguerButton from "../atoms/BurguerButton";
 
-function Navbar() {
+function Navbar({ navArrendatario }) {
+    const navigate = useNavigate();
 
     const [clicked, setClicked] = useState(false); // Para guardar el estado y cambios del boton burguer
+    const [clickedOpc, setClickedOpc] = useState(false); 
+
+    const redireccionarHome = (e)=> {
+        e.preventDefault();
+        navigate("/homeArrendador");
+    }
 
     const handlerClick = () => {
         //Cambia verdadero a falso y viceversa
         setClicked(!clicked);
     }
 
+    // const handlerClickOpc = () => {
+    //     //Cambia verdadero a falso y viceversa
+    //     setClickedOpc(!clickedOpc);
+    // }
+
     return ( 
         <>
             <StyledNavbar>
-                <img src={Logo} alt="Logo de la empresa" />
+                <img src={Logo} alt="Logo de la empresa" onClick={redireccionarHome} />
                 {/* SI cliked es TRUE --> active, si es FALSE no agrega la clase */}
                 <div className={`links ${clicked ? 'active' : ''}`} >
-                    <Link className="link" to="#" href="#">Publicar Inmuebles</Link>
-                    <Link className="link" to="/mispublicacionesArrendador" >Mis Inmuebles</Link>
-                    <Link className="link" to="/masinfoarrendador">Más información</Link>
-                    <Link className="link" to="#" href="#">Mi perfil</Link>
+                    {/* <Link onClick={handlerClickOpc} className={`link ${clickedOpc ? 'activeOpc' : ''}`} to="#">Publicar Inmuebles</Link> */}
+                    {/* <div className={`${navArrendatario ? 'innactive' : ''}`}>
+                    </div> */}
+                    {/* <Link className='link' to="#">{navArrendatario ? '' : 'Publicar Inmueble'}</Link> */}
+                    <Link className={`link ${navArrendatario ? 'innactive' : ''}`} to="#">Publicar Inmueble</Link>
+                    <Link className='link' to="/mispublicacionesArrendador" >Mis Inmuebles</Link>
+                    <Link className='link' to="/masinfoarrendador">Más información</Link>
+                    <Link className='link' to="#" href="#">Mi perfil</Link>
                     <button>Cerrar Sesión</button>
                 </div>
 
@@ -48,6 +66,7 @@ const StyledNavbar = styled.nav`
     /* border-bottom: 3px solid salmon; */
     img{
         height: 70%;
+        cursor: pointer;
     }
     .link{
         color: black;
@@ -80,14 +99,23 @@ const StyledNavbar = styled.nav`
             font-size: 2rem;
             display: block;
         }
+        /* .link.activeOpc{
+            color: #0080FF;
+            background: red;
+        } */
 
-        @media(min-width: 1055px) {
+        @media(min-width: 1055px) { 
             position: initial;
             margin: 0;
             .link{
                 font-size: 1rem;
                 color: black;
                 display: inline;
+            }
+            .link.activeOpc{
+                color: #0080FF;
+                padding: 25px 10px;
+                border-bottom: 5px solid #2E97FF;
             }
         }
     }
@@ -100,6 +128,7 @@ const StyledNavbar = styled.nav`
         left: 0;
         right: 0;
         text-align: center;
+        z-index: 20;
         .link{
             color: white;
             margin-bottom: 1.5rem;
@@ -107,7 +136,7 @@ const StyledNavbar = styled.nav`
             margin-left: 0;
         }
         button{
-            width: 60%;
+            width: 50%;
             background-color: white;
             color: #0080FF;
         }
@@ -117,6 +146,9 @@ const StyledNavbar = styled.nav`
         @media(min-width: 1055px) {
             display: none;
         }
+    }
+    .link.innactive{
+        display: none;
     }
 `;
 
@@ -128,8 +160,13 @@ const StyledBgDiv = styled.div`
     width: 100%;
     height: 100%;
     background: #0080FF;
-    z-index: -1;
+    z-index: 11;
     transition: all .6s ease;
+    .btn_burguer{
+        @media(min-width: 1055px) {
+            display: none;
+        }
+    }
     &.active{
         top: 0;
         left: 0;

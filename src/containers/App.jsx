@@ -1,5 +1,6 @@
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import HomeArrendador from '../pages/HomeArrendador';
+import HomerArrendatario from '../pages/HomerArrendatario';
 import InformacionAdicional from '../pages/InformacionAdicional';
 import Landing from '../pages/Landing';
 import Login from '../pages/Login';
@@ -17,6 +18,9 @@ function App() {
                 <Route path="/homeArrendador" element={<HomeArrendador/>} />
                 <Route path="/mispublicacionesArrendador" element={<MisPublicacionesArrendador/>} />
                 <Route path="/masinfoarrendador" element={<InformacionAdicional/>} />
+
+
+                <Route path="/homearrendatario" element={<HomerArrendatario/>} />
 
                 <Route path="/*" element={<NotFound/>} /> 
             </Routes>

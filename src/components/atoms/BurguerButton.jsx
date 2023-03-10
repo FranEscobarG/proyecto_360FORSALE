@@ -22,6 +22,7 @@ const StyledBurguer = styled.div`
     position: relative;
     cursor: pointer;
     display: inline-block;
+    z-index: 22;
     }
     .nav-icon-5 span{
     background-color:#0080FF;
@@ -46,12 +47,15 @@ const StyledBurguer = styled.div`
     left: 0px;
     }
     .nav-icon-5:not(.open):hover span:nth-child(1){
+        
     transform: rotate(-3deg) scaleY(1.1);
     }
     .nav-icon-5:not(.open):hover span:nth-child(2){
+        
     transform: rotate(3deg) scaleY(1.1);
     }
     .nav-icon-5:not(.open):hover span:nth-child(3){
+        
     transform: rotate(-4deg) scaleY(1.1);
     }
     .nav-icon-5.open span:nth-child(1){
