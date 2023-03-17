@@ -1,50 +1,47 @@
-import {useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-function CardTwo({ img, subtitle, ruta, cardCatalogo, price, info }) {
-    return ( 
-        <StyledCardTwo>
+function CardTwo({ img, subtitle, ruta, price, info }) {
+    return (
+        <StyledCardTwo >
             <figure className='cursor_logo'>
                 <img src={img} alt="Foto del inmueble" />
             </figure>
             <div className="contenido">
                 <h3>{subtitle}</h3>
-                
-                <div className={`${cardCatalogo ? 'innactive' : ''}`}>
-                    <Link className={`btn_editar`} to={ruta}>Editar publicación</Link>
-                </div>
-                <div className={`description ${cardCatalogo ? 'active_description' : ''}`} >
-                    <span className='price'>{price}</span>
-                    <p className='text_description'>{info}</p>
-                </div>
-                
+                <span className='price'>{price}</span>
+                <p className='text_description'>{info}</p>
             </div>
         </StyledCardTwo>
-     );
+    );
 }
 
 const StyledCardTwo = styled.div`
-    /* height: 400px; */
-    width: 25%;
+    display: flex;
+    width: 45%;
+    padding: 20px 10px;
     border-radius: 10px;
     overflow: hidden;
-    background-color: #ebf5ff;
-    box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+    background-color: #f0f7ff;
+    box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
     transition: all .4s ease;
     &:hover{
         box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
         transform: translateY(-3%);
     }
     img{
-        width: 100%;
         height: 225px;
         cursor: pointer;
     }
     .contenido{
         padding: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        grid-gap: 2%;
     }
     .contenido h3{
+        width: 100%;
         font-family: 'Hepta Slab';
         font-size: 1.2rem;
         font-weight: 600;
@@ -69,23 +66,14 @@ const StyledCardTwo = styled.div`
         background: #5CAEFF;
         color: white;
     }
-    .innactive{
-        display: none;
-    }
-    .description{
-        display: none;
-    }
-    .active_description{
-        display: block;
-    }
-    .description .price{
+    .price{
         font-family: 'Harmattan';
         font-style: normal;
         font-weight: 550;
         font-size: 1.5rem;
         color: #0080FF;
     }
-    .description  .text_description{
+    .text_description{
         font-family: 'Harmattan';
         font-size: 1.4rem;
         line-height: 1.2rem;

@@ -75,61 +75,23 @@
     /* background-color: blueviolet; */
 }
 
-/* @media screen and (max-width:768px){
-    .flex_catalogo{
-        display: block;
-    }
-    
-} */
-/* @media screen and (max-width:1370px){
-    .container-homeSearch{
-        bottom: 5%;
-    }
-    .container-homeSearch .buttons{
-        gap: .9rem;
-    }
-    .container-homeSearch .search{
-        padding: .2rem .6rem;
-    }
-    .container-homeSearch .search .inputSearch{
-        font-size: .9rem;
-    }
-    .container-homeSearch .search .btn_search{
-        padding: .2rem .6rem .1rem;
-        font-size: 1.2rem;
-    }   
-} */
 
-/* @media screen and (max-width:920px){
-    /* width: 60%; * /
-} */
 
-/* @media screen and (max-width:767px){
-    .container-homeSearch{
-        width: 90%;
-        bottom: 3%;
-        padding: .5rem .8rem;
-        display: flex;
-        flex-wrap: wrap;
-        grid-gap: 1rem;
-    }
-    .container-homeSearch .buttons{
-        width: 100%;
-        gap: 1rem;
-    }
-    
-    .container-homeSearch .search{
-        width: 100%;
-        padding: .2rem .6rem;
-    }
-    
-    .container-homeSearch .search .inputSearch{
-        width: 80%;
-        font-size: .8rem;
-    }
-    .container-homeSearch .search .btn_search{
-        padding: .2rem .4rem .1rem;
-        margin-left: 0;
-        font-size: 1rem;
-    }   
-} */
+/*sistema de filtrado*/
+[value="catalogo"]:checked ~ .post[data-category]{
+    display: block;
+}
+
+[value="ventas"]:checked ~ .post:not([data-category~="ventas"]),
+[value="rentas"]:checked ~ .post:not([data-category~="rentas"]),
+[value="remates"]:checked ~ .post:not([data-category~="remates"]){
+    display: none;
+}
+
+[value="catalogo"]:checked ~ .buttons [for="catalogo"],
+[value="ventas"]:checked ~ .buttons [for="ventas"],
+[value="rentas"]:checked ~ .buttons [for="rentas"],
+[value="remates"]:checked ~ .buttons [for="remates"]{
+    background: red;
+    color: #fff;
+}

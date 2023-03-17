@@ -2,8 +2,8 @@ import styled from "styled-components";
 import ButtonFilter from "../atoms/ButtonFilter";
 
 const StyledSearch = styled.div`
-    margin-top: 10%;
-    width: 80%;
+    margin-top: ${ props => (props.homeSearch) ? '10%' : '1%' };
+    width: ${ props => (props.homeSearch) ? '80%' : '90%' } ;
     min-height: 15%;
     padding: 0 1rem;
     display: flex;
@@ -11,9 +11,11 @@ const StyledSearch = styled.div`
     gap: 2%;
     border-radius: 1rem 1rem 0 0;
     background-color: ${ props => (props.homeSearch) ? '#5caeffc9' : 'transparent' };
+    border-bottom: ${ props => (props.homeSearch) ? 'none' : '4px solid #8AC5FF' };
     
     .buttons{
         width: 48%;
+        margin-bottom: ${ props => (props.homeSearch) ? '0' : '3%' };
         display: flex;
         justify-content: center;
         align-items: center;
@@ -22,10 +24,12 @@ const StyledSearch = styled.div`
 
     .search{
         width: 50%;
+        margin-bottom: ${ props => (props.homeSearch) ? '0' : '3%' };
         padding: .4rem 1rem;
         display: flex;
         justify-content: flex-start;
         align-items: center;
+        border: ${ props => (props.homeSearch) ? 'none' : 'solid 1px #5caeffc9' };
         border-radius: .6rem;
         background-color: #FFFFFF;
     }
@@ -104,14 +108,19 @@ const StyledSearch = styled.div`
     }
 `
 
-function Search({homeSearch}) {
+function Search({homeSearch, categories, filterCategory}) {
     return ( 
         <StyledSearch homeSearch={homeSearch} >
             <div className="buttons">
-                <ButtonFilter type="button" value="Catalogo" handlerClick={"handlerClick"} active />
+                {
+                    categories.map(category => (
+                        <ButtonFilter type="button" key={category}  value={category} category={category} filterCategory={filterCategory} />
+                    ))
+                }
+                {/* <ButtonFilter type="button" value="Catalogo" handlerClick={"handlerClick"} active />
                 <ButtonFilter type="button" value="Ventas" handlerClick={"handlerClick"} active />
                 <ButtonFilter type="button" value="Rentas" handlerClick={"handlerClick"} active />
-                <ButtonFilter type="button" value="Remates" handlerClick={"handlerClick"} active />
+                <ButtonFilter type="button" value="Remates" handlerClick={"handlerClick"} active /> */}
             </div>
             <div className="search">
                 <input type="search" name="" id="" className="inputSearch" placeholder=" Ingresa especificaciones del inmueble"/>
