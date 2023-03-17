@@ -10,6 +10,10 @@ const Subtitle = styled.h3`
     line-height: 80px;
     text-align: center;
     color: #000000;
+    @media screen and (max-width:767px){
+        font-size: 2rem;
+        line-height: 3rem;
+    }
 `; 
 
 

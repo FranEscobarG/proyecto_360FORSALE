@@ -7,6 +7,7 @@ import Landing from '../pages/Landing';
 import Login from '../pages/Login';
 import MisPublicacionesArrendador from '../pages/MisPublicacionesArrendador';
 import NotFound from '../pages/NotFound';
+import PublishProperty from '../pages/PublishProperty';
 import Register from "../pages/Register";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
                 <Route path="/mispublicacionesArrendador" element={<MisPublicacionesArrendador/>} />
                 <Route path="/masinfoarrendador" element={<InformacionAdicional/>} />
                 <Route path="/editarpublicacion" element={<EditPublication/>} />
+                <Route path="/publicarinmueble" element={<PublishProperty/>} />
 
 
                 <Route path="/homearrendatario" element={<HomerArrendatario/>} />

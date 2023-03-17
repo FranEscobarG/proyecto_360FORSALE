@@ -3,8 +3,8 @@ import Subtitle from "../atoms/Subtitle";
 import Title from "../atoms/Title";
 import Card from "../molecules/Card";
 
-
 import MiInmueble2 from '../../assets/img/miInmueble2.png'
+
 
 function ContainerHomeArrendatario() {
     return ( 

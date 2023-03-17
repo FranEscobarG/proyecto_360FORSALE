@@ -1,0 +1,178 @@
+.PublishContainers {
+    width: 90%;
+    padding: 1%;
+}
+
+.ContainerCards {
+    display: flex;
+    justify-content: space-around;
+    /* border: 2px solid red; */
+}
+
+.PublishCard {
+    /* height: 400px; */
+    width: 40%;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #ebf5ff;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+    transition: all .4s ease;
+}
+
+.Publish {
+    /* border: 2px solid blue; */
+    border-top: 2px solid black;
+}
+
+.publisht {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 38px;
+    text-align: center;
+}
+
+.ContainerButton {
+    display: flex;
+    justify-content: center; 
+    gap: 1rem;
+    /* border : 2px solid black; */
+}
+
+.TipoI { 
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid red; */
+}
+
+.tipodeinmueble { /* En el width se modifica el que dice casa en publicar inmueble*/
+    background: #F1F8FF;
+    color: #000000;
+    border: 1px solid #2E97FF;
+    border-radius: 8px;
+    width: 82%; 
+    font-family: 'Harmattan';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    text-indent: 7%;
+}
+
+.inmuebleselect {
+    font-family: 'Roboto';
+    font-size: 1.4rem;
+    color: #000000;
+    margin-bottom: -6px;
+}
+
+.file_u {
+    display: flex;
+    padding: 5%;
+    justify-content: center;
+    align-items: center;
+}
+
+.upload_file {
+    width: 50%;
+    height: 200px;
+    border: 2px solid #2E97FF;
+    border-radius: 5%;
+    background-color: #ebf5ff;
+
+    font-family: 'Roboto';
+    font-size: 0.9rem;
+    color: #000000;
+    margin-bottom: -6px;
+}
+
+.money {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5%;
+    background-color: #ebf5ff;
+}
+
+.Number_in {
+    background: #F1F8FF;
+    color: #2e97ff;
+    border: 1px solid #2E97FF;
+    border-radius: 12%;
+}
+
+.container_Buttons {
+    padding: 3%;
+    display: flex;
+    justify-content: center; 
+    gap: 1rem;
+}
+
+.Buttons_box {
+    display: flex;
+    gap: 1rem;
+    width: 40%;
+    background: #F1F8FF;
+}
+
+.Button_1 {
+    width: 90%;
+    padding: 6px 10px 4px 10px;
+    margin-top: 10%;
+    font-family: 'Harmattan';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.6rem;
+    background: #8AC5FF;
+    color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.Button_2 {
+    width: 90%;
+    padding: 6px 10px 4px 10px;
+    margin-top: 10%;
+    font-family: 'Harmattan';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.6rem;
+    background: #2E97FF;
+    color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.wrapper_inputpublish{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+    /* background: blanchedalmond; */
+    margin: 20px 4px 4px 5px; 
+    /* border: 1px solid red; */
+}
+
+@media screen and (max-width:830px) {
+    .PublishContainers{
+        width: 100%;
+    }
+    .ContainerCards {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .PublishCard {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+}
