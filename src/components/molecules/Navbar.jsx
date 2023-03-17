@@ -10,11 +10,10 @@ function Navbar({ navArrendatario }) {
     const navigate = useNavigate();
 
     const [clicked, setClicked] = useState(false); // Para guardar el estado y cambios del boton burguer
-    const [clickedOpc, setClickedOpc] = useState(false); 
+    // const [clickedOpc, setClickedOpc] = useState(false); 
 
-    const redireccionarHome = (e)=> {
-        e.preventDefault();
-        navigate("/homeArrendador");
+    const redireccionarHome = ()=> {
+        navigate(`${navArrendatario ? '/homearrendatario' : '/homeArrendador'}`);
     }
 
     const handlerClick = () => {
@@ -38,8 +37,8 @@ function Navbar({ navArrendatario }) {
                     </div> */}
                     {/* <Link className='link' to="#">{navArrendatario ? '' : 'Publicar Inmueble'}</Link> */}
                     <Link className={`link ${navArrendatario ? 'innactive' : ''}`} to="/publicarinmueble">Publicar Inmueble</Link>
-                    <Link className='link' to="/mispublicacionesArrendador" >Mis Inmuebles</Link>
-                    <Link className='link' to="/masinfoarrendador">Más información</Link>
+                    <Link className='link' to={`${navArrendatario ? '/misinmueblesarrendatario' : '/mispublicacionesArrendador'}`} >Mis Inmuebles</Link>
+                    <Link className='link' to={`${navArrendatario ? '/masinfoarrendatario   ' : '/masinfoarrendador'}`} >Más información</Link>
                     <Link className='link' to="#" href="#">Mi perfil</Link>
                     <button>Cerrar Sesión</button>
                 </div>
@@ -88,7 +87,7 @@ const StyledNavbar = styled.nav`
     .links{
         position: absolute;
         top: -800px;
-        left: -2000px;
+        /* left: -2000px; */
         right: 0;
         margin: auto;
         text-align: center;
@@ -125,7 +124,7 @@ const StyledNavbar = styled.nav`
         position: absolute;
         margin: auto;
         top: 30%;
-        left: 0;
+        /* left: 0; */
         right: 0;
         text-align: center;
         z-index: 20;
@@ -156,7 +155,7 @@ const StyledNavbar = styled.nav`
 const StyledBgDiv = styled.div`
     position: absolute;
     top: -1000px;
-    left: -1000px;
+    /* left: -1000px; */
     width: 100%;
     height: 100%;
     background: #0080FF;
@@ -169,10 +168,10 @@ const StyledBgDiv = styled.div`
     }
     &.active{
         top: 0;
-        left: 0;
+        margin-top: 100px;
         width: 100%;
-        height: 100%;
-        border-radius: 0 0 70% 0;
+        height: 85%;
+        border-radius: 0 0 40% 0;
     }
 `
 

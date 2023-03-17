@@ -1,28 +1,17 @@
-import ButtonFilter from "../atoms/ButtonFilter";
 import Subtitle from "../atoms/Subtitle";
 import Title from "../atoms/Title";
 import Card from "../molecules/Card";
 
 import MiInmueble2 from '../../assets/img/miInmueble2.png'
+import Search from "../molecules/Search";
 
 
 function ContainerHomeArrendatario() {
     return ( 
         <section>
-            <div className="cover-home_arrendador">
+            <div className="cover-home_arrendatario">
                 <Title>COMPRAR TU INMUEBLE CON NOSOTROS AHORA ES MÁS FACÍL</Title>
-                <div className="container-homeSearch">
-                    <div className="buttons">
-                        <ButtonFilter type="button" value="Catalogo" handlerClick={"handlerClick"} active />
-                        <ButtonFilter type="button" value="Ventas" handlerClick={"handlerClick"} active />
-                        <ButtonFilter type="button" value="Rentas" handlerClick={"handlerClick"} active />
-                        <ButtonFilter type="button" value="Remates" handlerClick={"handlerClick"} active />
-                    </div>
-                    <div className="search">
-                        <input type="search" name="" id="" className="inputSearch" placeholder=" Ingresa especificaciones del inmueble"/>
-                        <button className="btn_search">Buscar</button>
-                    </div>
-                </div>
+                <Search homeSearch={true} />
             </div>
 
             <div className="container_catalogo">

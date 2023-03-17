@@ -1,14 +1,17 @@
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import CatalogFiltered from '../pages/CatalogFiltered';
 import EditPublication from '../pages/EditPublication';
 import HomeArrendador from '../pages/HomeArrendador';
 import HomerArrendatario from '../pages/HomerArrendatario';
 import InformacionAdicional from '../pages/InformacionAdicional';
+import InformacionAdicionalTwo from '../pages/InformacionAdicionalTwo';
 import Landing from '../pages/Landing';
 import Login from '../pages/Login';
+import MisInmueblesArrendatario from '../pages/MisInmueblesArrendatario.jsx';
 import MisPublicacionesArrendador from '../pages/MisPublicacionesArrendador';
-import NotFound from '../pages/NotFound';
 import PublishProperty from '../pages/PublishProperty';
 import Register from "../pages/Register";
+import NotFound from '../pages/NotFound';
 
 function App() {
     return ( 
@@ -25,6 +28,9 @@ function App() {
 
 
                 <Route path="/homearrendatario" element={<HomerArrendatario/>} />
+                <Route path="/masinfoarrendatario" element={<InformacionAdicionalTwo/>} />
+                <Route path="/misinmueblesarrendatario" element={<MisInmueblesArrendatario/>} />
+                <Route path="/catalogofiltrado" element={<CatalogFiltered/>} />
 
                 <Route path="/*" element={<NotFound/>} /> 
             </Routes>

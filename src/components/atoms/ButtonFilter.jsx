@@ -30,7 +30,7 @@ const StyledButtonFilter = styled.button`
 
 function ButtonFilter({type, value, handlerClick}) {
     return ( 
-        <StyledButtonFilter type={type} onClick={handlerClick} >{value}</StyledButtonFilter>
+        <StyledButtonFilter type={type} /*onClick={handlerClick}*/ >{value}</StyledButtonFilter>
      );
 }
 

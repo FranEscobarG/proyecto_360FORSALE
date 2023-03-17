@@ -7,6 +7,11 @@ const Redirector = styled.a`
     font-style: normal;
     font-size: 1.2rem;
     text-align: center;
+    
+    @media screen and (max-width:920px){
+        font-size: 1rem;
+    }
+
 `;
 
 export default Redirector;

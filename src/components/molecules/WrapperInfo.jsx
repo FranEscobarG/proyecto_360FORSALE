@@ -1,4 +1,3 @@
-import TittleA from "../atoms/TittleA"
 import SubTittleA from "../atoms/SubTittleA";
 import Redirector from "../atoms/Redirector";
 import Img1 from '../../assets/img/Info1.svg'
@@ -11,40 +10,37 @@ import Img7 from '../../assets/img/Info7.svg'
 import Img8 from '../../assets/img/Info8.svg'
 import Img9 from '../../assets/img/Info9.svg'
 import '../../assets/styles/wrapperInfo.css'
+import Subtitle from "../atoms/Subtitle";
 
 function WrapperInfo() {
-    return ( 
+    return (
         <div className="container_masInfo">
-                <TittleA>Mas Información</TittleA>
-                <div className="caption">
-                        <SubTittleA>Ultimas Noticias</SubTittleA>
-                </div>
-                <div className="section">
-                    <div className="cuerpo-tarjeta">
-                        <div className="foto">
-                            <img className="ImgInfo" src={Img1} alt="imagen informativa" />
-                        </div>  
-                        <div className="descripcion">
-                            <Redirector>Todo lo que debes saber antes de poner en venta un inmueble</Redirector>
-                        </div>
-                    </div>
-                    <div className="cuerpo-tarjeta">
-                        <div className="foto">
-                            <img className="ImgInfo" src={Img2} alt="imagen informativa" />
-                        </div>
-                        <div className="descripcion">
-                            <Redirector>¿Que impuestos debo pagar al comprar o vender un inmueble?</Redirector>
-                        </div>
-                    </div>
-                    <div className="cuerpo-tarjeta">
-                        <div className="foto">
-                            <img className="ImgInfo" src={Img3} alt="imagen informativa" />
-                        </div>
-                        <div className="descripcion">
-                            <Redirector>Consejos de profecionales para decorar tu nuevo hogar</Redirector>
-                        </div>
+            <Subtitle>Mis Inmuebles Adquiridos</Subtitle>
+            <div className="caption">
+                <SubTittleA>Ultimas Noticias</SubTittleA>
+            </div>
+            <div className="section">
+                <div className="cuerpo-tarjeta">
+                    <img className="ImgInfo" src={Img1} alt="imagen informativa" />
+                    <div className="descripcion">
+                        <Redirector>Todo lo que debes saber antes de poner en venta un inmueble</Redirector>
                     </div>
                 </div>
+                <div className="cuerpo-tarjeta">
+                <img className="ImgInfo" src={Img2} alt="imagen informativa" />
+                    <div className="descripcion">
+                        <Redirector>¿Que impuestos debo pagar al comprar o vender un inmueble?</Redirector>
+                    </div>
+                </div>
+                <div className="cuerpo-tarjeta">
+                    <div className="foto">
+                        <img className="ImgInfo" src={Img3} alt="imagen informativa" />
+                    </div>
+                    <div className="descripcion">
+                        <Redirector>Consejos de profecionales para decorar tu nuevo hogar</Redirector>
+                    </div>
+                </div>
+            </div>
 
             <div className="caption2">
                 <SubTittleA>Mercado Inmobiliario</SubTittleA>
@@ -106,7 +102,7 @@ function WrapperInfo() {
                 </div>
             </div>
         </div>
-     );
+    );
 }
 
 export default WrapperInfo;
