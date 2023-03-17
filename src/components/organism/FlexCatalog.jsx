@@ -1,9 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
 import CardTwo from "../molecules/CardTwo";
-import MiInmueble1 from '../../assets/img/miInmueble1.png'
-import MiInmueble2 from '../../assets/img/miInmueble2.png'
-import MiInmueble3 from '../../assets/img/miInmueble3.png'
 import Search from "../molecules/Search";
 
 function FlexCatalog() {
@@ -58,7 +55,7 @@ function FlexCatalog() {
         }
     ];
     
-    const allCategories = ['CATALOGO', 'VENTAS', 'RENTAS', 'REMATES'];
+    const allCategories = ['VENTAS', 'RENTAS', 'REMATES'];
 
     const [categories, setCategories] = useState(allCategories);
     const [articles, setArticles] = useState(data);
@@ -83,12 +80,6 @@ function FlexCatalog() {
                     ))
                 }
                 
-                {/* <CardTwo img={MiInmueble1} subtitle="Departamento en Real del Bosque" ruta="#"price={"$7,200,000"} info={"Cuenta con 3 habitaciones, 1 baño reformado, cocina equipada y un salón-comedor con acceso a una terraza con vistas panorámicas. Dispone de garaje y trastero."} />
-                <CardTwo img={MiInmueble3} subtitle="Casa con alberca" ruta="#" price={"$7,200,000"} info={"Cuenta con 3 habitaciones, 1 baño reformado, cocina equipada y un salón-comedor con acceso a una terraza con vistas panorámicas. Dispone de garaje y trastero."} />
-
-                <CardTwo img={MiInmueble2} subtitle="Rancho San Agustin" ruta="#" price={"$7,200,000"} info={"Cuenta con 3 habitaciones, 1 baño reformado, cocina equipada y un salón-comedor con acceso a una terraza con vistas panorámicas. Dispone de garaje y trastero."} />
-                <CardTwo img={MiInmueble1} subtitle="Departamento en Real del Bosque" ruta="#" price={"$7,200,000"} info={"Cuenta con 3 habitaciones, 1 baño reformado, cocina equipada y un salón-comedor con acceso a una terraza con vistas panorámicas. Dispone de garaje y trastero."} />
-                <CardTwo img={MiInmueble3} subtitle="Casa con alberca" ruta="#" price={"$7,200,000"} info={"Cuenta con 3 habitaciones, 1 baño reformado, cocina equipada y un salón-comedor con acceso a una terraza con vistas panorámicas. Dispone de garaje y trastero."} /> */}
             </StyledFlexCatalog>
         </>
         

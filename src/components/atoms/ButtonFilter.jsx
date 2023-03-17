@@ -28,9 +28,9 @@ const StyledButtonFilter = styled.button`
 `;
 
 
-function ButtonFilter({type, value, category, filterCategory}) {
+function ButtonFilter({type, value, category, filterCategory, btnCatHome, funcion}) {
     return ( 
-        <StyledButtonFilter type={type} key={category} onClick={() => filterCategory(category)} >{value}</StyledButtonFilter>
+        <StyledButtonFilter type={type} key={category} onClick={btnCatHome ? funcion : () => filterCategory(category)}  >{value}</StyledButtonFilter>
      );
 }
 

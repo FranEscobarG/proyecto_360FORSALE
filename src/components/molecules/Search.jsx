@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import ButtonFilter from "../atoms/ButtonFilter";
 
@@ -109,12 +110,25 @@ const StyledSearch = styled.div`
 `
 
 function Search({homeSearch, categories, filterCategory}) {
+    const navigate = useNavigate();
+
+    const handlerCatalog = (e)=> {
+        e.preventDefault();
+        navigate("/homearrendatario");
+    }
+    
+    const handlerCatalogFiltered = (e)=> {
+        e.preventDefault();
+        navigate("/catalogofiltrado");
+    }
+
     return ( 
         <StyledSearch homeSearch={homeSearch} >
             <div className="buttons">
+                <ButtonFilter type="button" value={'CATALOGO'} btnCatHome={true} funcion={handlerCatalog} />
                 {
                     categories.map(category => (
-                        <ButtonFilter type="button" key={category}  value={category} category={category} filterCategory={filterCategory} />
+                        <ButtonFilter type="button" key={category}  value={category} category={category} filterCategory={filterCategory}  btnCatHome={homeSearch} funcion={handlerCatalogFiltered}  />
                     ))
                 }
                 {/* <ButtonFilter type="button" value="Catalogo" handlerClick={"handlerClick"} active />

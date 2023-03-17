@@ -7,11 +7,14 @@ import Search from "../molecules/Search";
 
 
 function ContainerHomeArrendatario() {
+    const allCategories = ['VENTAS', 'RENTAS', 'REMATES'];
+
+
     return ( 
         <section>
             <div className="cover-home_arrendatario">
                 <Title>COMPRAR TU INMUEBLE CON NOSOTROS AHORA ES MÁS FACÍL</Title>
-                <Search homeSearch={true} />
+                <Search homeSearch={true} categories={allCategories} />
             </div>
 
             <div className="container_catalogo">
