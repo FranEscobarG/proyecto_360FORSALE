@@ -1,0 +1,12 @@
+.divEspecificacion{
+    background-color: #f1f8ff;
+    border: solid #0080ff 1px;
+    height: 100%;
+    padding: 0 15px;
+}
+
+.info_especificacion{
+    font-family: 'Harmattan';
+    font-size: 1rem;
+    color: #000000;
+}

@@ -20,10 +20,12 @@ function PublishContainer() {
                         <form>
                             <div className="TipoI">
                                 <LabelPublish msn = {"Tipo de inmueble:"} />
-                                <select className="tipodeinmueble" id='Tipo de Inmueble' name='tipo' required>
+                                <select className="tipodeinmueble" id='tipoinmueble' name='tipoinmueble' required>
                                     <option className="inmuebleselect" value='Casa' >Casa</option>
                                     <option className="inmuebleselect" value='Departamento'>Departamento</option>
-                                    <option className="inmuebleselect" value='Departamento'>Mansion de Playa</option>
+                                    <option className="inmuebleselect" value='Condominio'>Condominio</option>
+                                    <option className="inmuebleselect" value='Local comercial'>Local Comercial</option>
+                                    <option className="inmuebleselect" value='Mansion'>Mansión</option>
                                 </select>
                             </div>
                             <WrapperInputPublish msn="Lugar de Inmoviliario" type="text" placeholder="" />

@@ -12,6 +12,7 @@ import MisPublicacionesArrendador from '../pages/MisPublicacionesArrendador';
 import PublishProperty from '../pages/PublishProperty';
 import Register from "../pages/Register";
 import NotFound from '../pages/NotFound';
+import EspecificacionArrendatario from '../pages/EspecificacionArrendatario';
 
 function App() {
     return ( 
@@ -31,6 +32,7 @@ function App() {
                 <Route path="/masinfoarrendatario" element={<InformacionAdicionalTwo/>} />
                 <Route path="/misinmueblesarrendatario" element={<MisInmueblesArrendatario/>} />
                 <Route path="/catalogofiltrado" element={<CatalogFiltered/>} />
+                <Route path="/especificacionarrendatario" element={<EspecificacionArrendatario/>} />
 
                 <Route path="/*" element={<NotFound/>} /> 
             </Routes>

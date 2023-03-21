@@ -7,8 +7,6 @@ function WrapperEdit( { type, msn, info} ) {
         <div className={`wrapper_editar ${type}`}>
             <SubTittleB msn={msn} />
             <TextAreaEdit value={info} />
-            {/* <SubTittleB msn={msn} ></SubTittleB>
-            <TextAreaEdit textArea={textArea}/> */}
         </div>
     );
 }
