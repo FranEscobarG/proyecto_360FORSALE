@@ -16,12 +16,13 @@ const StyledButtonFilter = styled.button`
     cursor: pointer;
 
     @media screen and (max-width:767px){
-        width: 25%;
+        width: 22%;
         padding: .5rem .4rem .3rem;
-        font-size: 1.2rem;
+        font-size: .9rem;
+    font-weight: 700;
     }
 
-    @media screen and (max-width:1370px){
+    @media screen and (min-width:768px) and (max-width:1374px){
         width: 25%;
         font-size: 1.4rem;
     }

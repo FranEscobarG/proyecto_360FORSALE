@@ -1,14 +1,13 @@
 import Subtitle from "../atoms/Subtitle";
 import Title from "../atoms/Title";
 import Card from "../molecules/Card";
-
-import MiInmueble2 from '../../assets/img/miInmueble2.png'
 import Search from "../molecules/Search";
+import MiInmueble2 from '../../assets/img/miInmueble2.png'
+import '../../assets/styles/homeArrendador.css'
 
 
 function ContainerHomeArrendatario() {
     const allCategories = ['VENTAS', 'RENTAS', 'REMATES'];
-
 
     return ( 
         <section>
@@ -19,7 +18,7 @@ function ContainerHomeArrendatario() {
 
             <div className="container_catalogo">
                 <Subtitle>CATALOGO DE INMUEBLES</Subtitle>
-                <div className="flex_catalogo">
+                <div className="flex_catalogo" >
                     <Card img={MiInmueble2} subtitle="Rancho San Agustin" ruta="#" cardCatalogo={true} price={"$7,200,000"} info={"Cuenta con 3 habitaciones, 1 baño reformado, cocina equipada y un salón-comedor con acceso a una terraza con vistas panorámicas. Dispone de garaje y trastero."} />
                     <Card img={MiInmueble2} subtitle="Rancho Marlene" ruta="#" cardCatalogo={true} price={"$7,200,000"} info={"Cuenta con 3 habitaciones, 1 baño reformado, cocina equipada y un salón-comedor con acceso a una terraza con vistas panorámicas. Dispone de garaje y trastero."} />
                     <Card img={MiInmueble2} subtitle="Quinta Dos Arbolitos" ruta="#" cardCatalogo={true} price={"$7,200,000"} info={"Cuenta con 3 habitaciones, 1 baño reformado, cocina equipada y un salón-comedor con acceso a una terraza con vistas panorámicas. Dispone de garaje y trastero."} />  

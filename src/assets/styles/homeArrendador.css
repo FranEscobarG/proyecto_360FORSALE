@@ -13,6 +13,7 @@
 
 .cover-home_arrendatario{
     height: 80vh;
+    width: 100%;
     background-image: url(../img/coverHome1.jpg);
     background-position: center center;
     background-repeat: no-repeat;
@@ -50,6 +51,7 @@
 .caption-home_arrendador h3{
     font-family: 'Hepta Slab';
     font-size: 1.8rem;
+    text-align: center;
     color: black;
 }
 
@@ -76,22 +78,17 @@
 }
 
 
-
-/*sistema de filtrado*/
-[value="catalogo"]:checked ~ .post[data-category]{
-    display: block;
+/* DISEÑO SE ADAPTA PARA TABLET  max-1023 */
+@media screen and (min-width:768px) and (max-width:1374px){
+    
 }
 
-[value="ventas"]:checked ~ .post:not([data-category~="ventas"]),
-[value="rentas"]:checked ~ .post:not([data-category~="rentas"]),
-[value="remates"]:checked ~ .post:not([data-category~="remates"]){
-    display: none;
-}
 
-[value="catalogo"]:checked ~ .buttons [for="catalogo"],
-[value="ventas"]:checked ~ .buttons [for="ventas"],
-[value="rentas"]:checked ~ .buttons [for="rentas"],
-[value="remates"]:checked ~ .buttons [for="remates"]{
-    background: red;
-    color: #fff;
+/* DISEÑO SE ADAPTA PARA MOVIL */
+@media screen and (max-width:767px){
+    .cover-home_arrendador .btn_homeArrendador{
+        width: 80%;
+        margin-top: 20%;
+        font-size: 1.7em;
+    }
 }

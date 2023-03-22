@@ -7,13 +7,12 @@ function ButtonRectangle({type, value, handlerClick}) {
 }
 const StyledButtonRectangle = styled.button`
     width: 30%;
-    padding: 6px 10px 4px 10px;
+    padding: 2px 10px 0 10px;
     margin-top: 10%;
-    font-family: 'Roboto';
+    font-family: 'Harmattan';
     font-style: normal;
     font-weight: 500;
-    font-size: 1.6rem;
-    text-decoration-line: underline;
+    font-size: 1.8rem;
     font-variant: small-caps;
     background: #8AC5FF;
     color: white;

@@ -62,8 +62,6 @@ const StyledSearch = styled.div`
     }
 
     @media screen and (max-width:1370px){
-        bottom: 8%;
-
         .buttons{
             gap: .9rem;
         }
@@ -81,8 +79,8 @@ const StyledSearch = styled.div`
 
     @media screen and (max-width:767px){
         width: 90%;
-        bottom: 3%;
         padding: .5rem .8rem;
+        margin-top: ${ props => (props.homeSearch) ? '35%' : '1%' };
         display: flex;
         flex-wrap: wrap;
         grid-gap: 1rem;

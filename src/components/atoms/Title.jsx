@@ -8,7 +8,7 @@ const Title = styled.h1`
     font-size: 3rem;
     line-height: 5rem;
     text-align: center;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     color: #FFFFFF;
     @media screen and (max-width:767px){
         font-size: 1.8rem;

@@ -1,12 +1,23 @@
+import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
 import Subtitle from "../atoms/Subtitle";
 import ButtonRectangle from "../atoms/ButtonRectangle";
 import WrapperInputPublish from "../molecules/WrapperInputPublish";
 import LabelPublish from "../atoms/LabelPublish";
+import IconUpload from '../../assets/img/iconUpload.svg'
+import IconSendVideo from '../../assets/img/iconSendVideo.svg'
 import '../../assets/styles/PublishContainer.css'
 
 
 function PublishContainer() {
-    return ( 
+    const navigate = useNavigate();
+
+    const redireccionarHArrendador = ()=> {
+        navigate('/homeArrendador');
+    }
+
+
+    return (
         <div className="PublishContainers">
             <Subtitle>Publicar nuevo Inmueble</Subtitle>
             <div className="ContainerCards">
@@ -14,12 +25,12 @@ function PublishContainer() {
                     <div className="Publish">
                         <h5 className="publisht">¿Que quieres publicar?</h5>
                         <div className="ContainerButton">
-                            <ButtonRectangle type="button" value="VENTA" />
-                            <ButtonRectangle type="button" value="RENTA"/>
+                            <ButtonRectangle type="button" value="Venta" />
+                            <ButtonRectangle type="button" value="Renta" />
                         </div>
                         <form>
                             <div className="TipoI">
-                                <LabelPublish msn = {"Tipo de inmueble:"} />
+                                <LabelPublish msn={"Tipo de inmueble:"} />
                                 <select className="tipodeinmueble" id='tipoinmueble' name='tipoinmueble' required>
                                     <option className="inmuebleselect" value='Casa' >Casa</option>
                                     <option className="inmuebleselect" value='Departamento'>Departamento</option>
@@ -29,34 +40,93 @@ function PublishContainer() {
                                 </select>
                             </div>
                             <WrapperInputPublish msn="Lugar de Inmoviliario" type="text" placeholder="" />
-                            <WrapperInputPublish msn="Precio" type="text" placeholder="" />
+                            <WrapperInputPublish msn="Precio" type="number" placeholder="$" />
                         </form>
                     </div>
                 </div>
                 <div className="PublishCard">
-                    <div className="Container_Upload">
-                        <div className="uploadimagen">
-                            <h5 className="publisht">Inserta imagenes del inmoviliario</h5>
-                            <div className="file_u">
-                                <input className="upload_file" type="file"></input>
-                            </div>
-                            <div className="money">
-                                <LabelPublish className="cantidad_dinero" msn = {"Cantidad de dinero"}></LabelPublish>
-                                <input className="Number_in" type="number"></input>
-                            </div>
+                    <div className="container_Upload">
+                        <h5 className="publisht">Inserta imagenes del inmueble</h5>
+                        <StyledDivFile>
+                            <input type="file" name="" id="file" accept="image/*" />
+                            <label className="labelFile" htmlFor="file"><img src={IconUpload} alt="Icono de Archivo" /></label>
+                        </StyledDivFile>
+                        <div className="container_description">
+                            <LabelPublish msn={"Especificaciones"}></LabelPublish>
+                            <textarea rows="4" cols="50" className="input_description"></textarea>
+                        </div>
+                        <div className="uplodavideo">
+                            <label className="info_video" htmlFor="">Para tener mejores resultados le recomendamos que proporcione un recorrido virtual</label>
+                            <StyledDivVideo>
+                                <input type="file" name="" id="video" accept="video/*" />
+                                <label className="labelVideo" htmlFor="video">Cargar Video <img src={IconSendVideo} alt="Icono de Archivo" /></label>
+                            </StyledDivVideo>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="container_Buttons">
-                <div className="Buttons_box">
-                    <input className="Button_1" type="button" value="Salir"></input>
-                    <input className="Button_2" type="button" value="Publicar"></input>
-                </div>
 
+            <div className="container_Buttons">
+                <input className="button" type="button" value="Salir" onClick={redireccionarHArrendador}></input>
+                <input className="button btn_publish" type="button" value="Publicar"></input>
             </div>
         </div>
     );
 }
+
+const StyledDivFile = styled.div`
+    height: 35vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    #file{
+        display: none;
+    }
+    .labelFile{
+        min-height: 150px;
+        min-width: 200px;
+        background-color: #d7ebff;
+        border-radius: 1rem;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: opacity 0.5s ease;
+    }
+    .labelFile:hover{
+        opacity: 0.8;
+    }
+`
+
+const StyledDivVideo = styled.div`
+    width: 60%;
+    #video{
+        display: none;
+    }
+    .labelVideo{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10%;
+        font-family: 'Harmattan';
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: #2E97FF;
+        border: 2px solid #2E97FF;
+        border-radius: 8px;
+        gap: 15px;
+        cursor: pointer;
+        transition: opacity 0.5s ease;
+    }
+    .labelVideo:hover{
+        opacity: 0.6;
+    }
+    /* DISEÑO SE ADAPTA PARA MOVIL */
+    @media screen and (max-width:800px) {
+        width: 100%;
+    }
+`
 
 export default PublishContainer;

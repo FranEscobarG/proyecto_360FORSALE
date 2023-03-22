@@ -9,7 +9,6 @@ function CatalogFiltered() {
         <>
             <Navbar navArrendatario={true} />
             <FlexCatalog/>
-            {/* <ContainerHomeArrendatario/> */}
             <Footer/>
         </>
      );

@@ -21,21 +21,12 @@ function Navbar({ navArrendatario }) {
         setClicked(!clicked);
     }
 
-    // const handlerClickOpc = () => {
-    //     //Cambia verdadero a falso y viceversa
-    //     setClickedOpc(!clickedOpc);
-    // }
-
     return ( 
         <>
             <StyledNavbar>
                 <img src={Logo} alt="Logo de la empresa" onClick={redireccionarHome} />
                 {/* SI cliked es TRUE --> active, si es FALSE no agrega la clase */}
                 <div className={`links ${clicked ? 'active' : ''}`} >
-                    {/* <Link onClick={handlerClickOpc} className={`link ${clickedOpc ? 'activeOpc' : ''}`} to="#">Publicar Inmuebles</Link> */}
-                    {/* <div className={`${navArrendatario ? 'innactive' : ''}`}>
-                    </div> */}
-                    {/* <Link className='link' to="#">{navArrendatario ? '' : 'Publicar Inmueble'}</Link> */}
                     <Link className={`link ${navArrendatario ? 'innactive' : ''}`} to="/publicarinmueble">Publicar Inmueble</Link>
                     <Link className='link' to={`${navArrendatario ? '/misinmueblesarrendatario' : '/mispublicacionesArrendador'}`} >Mis Inmuebles</Link>
                     <Link className='link' to={`${navArrendatario ? '/masinfoarrendatario   ' : '/masinfoarrendador'}`} >Más información</Link>
@@ -98,12 +89,8 @@ const StyledNavbar = styled.nav`
             font-size: 2rem;
             display: block;
         }
-        /* .link.activeOpc{
-            color: #0080FF;
-            background: red;
-        } */
 
-        @media(min-width: 1055px) { 
+        @media(min-width: 1126px) { 
             position: initial;
             margin: 0;
             .link{
@@ -118,31 +105,34 @@ const StyledNavbar = styled.nav`
             }
         }
     }
+    /* ----------------------------------- */
     .links.active{
-        width: 100%;
-        display: block;
-        position: absolute;
-        margin: auto;
-        top: 30%;
-        /* left: 0; */
-        right: 0;
-        text-align: center;
-        z-index: 20;
-        .link{
-            color: white;
-            margin-bottom: 1.5rem;
-            margin-right: 0;
-            margin-left: 0;
-        }
-        button{
-            width: 50%;
-            background-color: white;
-            color: #0080FF;
+        @media(max-width: 1126px) {
+            width: 100%;
+            display: block;
+            position: absolute;
+            margin: auto;
+            top: 30%;
+            /* left: 0; */
+            right: 0;
+            text-align: center;
+            z-index: 20;
+            .link{
+                color: white;
+                margin-bottom: 1.5rem;
+                margin-right: 0;
+                margin-left: 0;
+            }
+            button{
+                width: 50%;
+                background-color: white;
+                color: #0080FF;
+            }
         }
     }
 
     .btn_burguer{
-        @media(min-width: 1055px) {
+        @media(min-width: 1126px) {
             display: none;
         }
     }
@@ -161,8 +151,11 @@ const StyledBgDiv = styled.div`
     background: #0080FF;
     z-index: 11;
     transition: all .6s ease;
+    @media(min-width: 1126px) {
+        display: none;
+    }
     .btn_burguer{
-        @media(min-width: 1055px) {
+        @media(min-width: 1126px) {
             display: none;
         }
     }

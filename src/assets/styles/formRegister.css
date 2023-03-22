@@ -12,6 +12,20 @@
     background-color: rgb(241, 248, 255);
 }
 
+.cover_containerLogin{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../img/cover.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: rgb(241, 248, 255);
+}
+
 .contenedor_form{
     position: relative;
     min-height: 70%;
@@ -62,4 +76,22 @@
 
 .form_register .link:hover{
     color: rgb(69, 131, 255);
+}
+
+
+/* DISEÑO SE ADAPTA PARA TABLET  max-1023 */
+@media screen and (min-width:768px) and (max-width:1374px){
+    .contenedor_form{
+        width: 50%;
+    }
+}
+
+
+/* DISEÑO SE ADAPTA PARA MOVIL */
+@media screen and (max-width:767px){
+    .contenedor_form{
+        width: 95%;
+        /* height: ; */
+        margin: 15% 0;
+    }
 }

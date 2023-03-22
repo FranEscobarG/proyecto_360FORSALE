@@ -10,22 +10,24 @@
 }
 
 .PublishCard {
-    /* height: 400px; */
     width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2% 0;
     border-radius: 10px;
-    overflow: hidden;
     background-color: #ebf5ff;
     box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
     transition: all .4s ease;
 }
 
 .Publish {
-    /* border: 2px solid blue; */
+    width: 90%;
     border-top: 2px solid black;
 }
 
 .publisht {
-    font-family: 'Roboto';
+    font-family: 'Hepta Slab';
     font-style: normal;
     font-weight: 300;
     font-size: 1.5rem;
@@ -37,91 +39,67 @@
     display: flex;
     justify-content: center; 
     gap: 1rem;
-    /* border : 2px solid black; */
 }
 
 .TipoI { 
     display: flex;
     flex-direction: column;
-    /* border: 1px solid red; */
+    margin-top: 5%;
 }
 
 .tipodeinmueble { /* En el width se modifica el que dice casa en publicar inmueble*/
+    width: 100%; 
+    padding: 8px 0;
     background: #F1F8FF;
-    color: #000000;
     border: 1px solid #2E97FF;
-    border-radius: 8px;
-    width: 82%; 
+    border-radius: 5px;
     font-family: 'Harmattan';
     font-style: normal;
     font-weight: 400;
     font-size: 1.2rem;
-    display: flex;
-    align-items: center;
-    text-indent: 7%;
+    text-indent: 5%;
 }
 
-.inmuebleselect {
-    font-family: 'Roboto';
-    font-size: 1.4rem;
-    color: #000000;
-    margin-bottom: -6px;
+.container_Upload{
+    width: 90%;
+}
+.input_description {
+    width: 95%;
+    padding: 15px 10px;
+    font-size: 1rem;
+    background: #F1F8FF;
+    color: #2e97ff;
+    border: 1px solid #2E97FF;
+    border-radius: 5px;
+    resize: none;
 }
 
-.file_u {
-    display: flex;
-    padding: 5%;
-    justify-content: center;
-    align-items: center;
-}
-
-.upload_file {
-    width: 50%;
-    height: 200px;
-    border: 2px solid #2E97FF;
-    border-radius: 5%;
-    background-color: #ebf5ff;
-
-    font-family: 'Roboto';
-    font-size: 0.9rem;
-    color: #000000;
-    margin-bottom: -6px;
-}
-
-.money {
+.uplodavideo{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 5%;
-    background-color: #ebf5ff;
+    margin-top: 5%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .8rem;
 }
-
-.Number_in {
-    background: #F1F8FF;
-    color: #2e97ff;
-    border: 1px solid #2E97FF;
-    border-radius: 12%;
+.info_video{
+    text-align: center;
 }
 
 .container_Buttons {
-    padding: 3%;
-    display: flex;
-    justify-content: center; 
-    gap: 1rem;
-}
-
-.Buttons_box {
-    display: flex;
-    gap: 1rem;
     width: 40%;
+    margin: 5% auto;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    padding: 5%;
     background: #F1F8FF;
+    gap: 1rem;
 }
-
-.Button_1 {
+.button {
     width: 90%;
     padding: 6px 10px 4px 10px;
-    margin-top: 10%;
     font-family: 'Harmattan';
     font-style: normal;
     font-weight: 700;
@@ -133,36 +111,28 @@
     border: none;
     cursor: pointer;
 }
-
-.Button_2 {
-    width: 90%;
-    padding: 6px 10px 4px 10px;
-    margin-top: 10%;
-    font-family: 'Harmattan';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 1.6rem;
+.btn_publish {
     background: #2E97FF;
-    color: white;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-    border: none;
-    cursor: pointer;
 }
 
 .wrapper_inputpublish{
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    padding-top: 15px;
-    /* background: blanchedalmond; */
-    margin: 20px 4px 4px 5px; 
-    /* border: 1px solid red; */
+    margin: 20px 0; 
 }
 
-@media screen and (max-width:830px) {
+
+/* DISEÑO SE ADAPTA PARA TABLET  max-1023 */
+@media screen and (min-width:768px) and (max-width:1374px){
+    
+}
+
+
+/* DISEÑO SE ADAPTA PARA MOVIL */
+@media screen and (max-width:800px) {
     .PublishContainers{
-        width: 100%;
+        width: 90%;
     }
     .ContainerCards {
         display: flex;
@@ -170,9 +140,12 @@
         width: 100%;
     }
     .PublishCard {
+        width: 100%;
+        margin: 5% 0 10% 0;
         display: flex;
         flex-direction: column;
-        width: 100%;
     }
-    
+    .container_Buttons {
+        width: 90%;
+    }
 }

@@ -76,20 +76,22 @@ const StyledCardTwo = styled.div`
     .text_description{
         font-family: 'Harmattan';
         font-size: 1.4rem;
-        line-height: 1.2rem;
+        line-height: 1.3rem;
         text-align: justify;
     }
 
-    @media screen and (max-width:1370px){
-        width: 35%;
+    /* DISEÑO SE ADAPTA PARA TABLET  max-1023 */
+    @media screen and (min-width:768px) and (max-width:1374px){
+        width: 70%;
+        margin: auto;
     }
 
-    @media screen and (max-width:920px){
-        width: 60%;
-    }
-
+    /* DISEÑO SE ADAPTA PARA MOVIL */
     @media screen and (max-width:767px){
-        width: 95%;
+        width: 90%;
+        margin: auto;
+        flex-direction: column;
+        padding: 20px;
         .contenido h3{
             font-size: 1rem;
             margin-bottom: .3rem;
@@ -100,10 +102,12 @@ const StyledCardTwo = styled.div`
         .description  .text_description{
             font-family: 'Harmattan';
             font-size: 1.2rem;
-            line-height: 1.2rem;
+            line-height: 1.3rem;
             text-align: justify;
         }
     }
+
+
 `
 
 export default CardTwo;
