@@ -12,7 +12,7 @@ import '../../assets/styles/PublishContainer.css'
 function PublishContainer() {
     const navigate = useNavigate();
 
-    const redireccionarHArrendador = ()=> {
+    const redireccionarHArrendador = () => {
         navigate('/homeArrendador');
     }
 
@@ -39,8 +39,15 @@ function PublishContainer() {
                                     <option className="inmuebleselect" value='Mansion'>Mansión</option>
                                 </select>
                             </div>
-                            <WrapperInputPublish msn="Lugar de Inmoviliario" type="text" placeholder="" />
-                            <WrapperInputPublish msn="Precio" type="number" placeholder="$" />
+                            <WrapperInputPublish msn="Precio:" type="number" placeholder="$" />
+                            <div className="uplodavideo">
+                                <label className="info_video" htmlFor="">Ubicación del inmueble</label>
+                            </div>
+                            <div className="input_small">
+                                <WrapperInputPublish small={true} msn="Pais:" type="text" placeholder="Mexico" />
+                                <WrapperInputPublish small={true} msn="Ciudad:" type="text" placeholder="Tuxtla Gutierrez, Chiapas" />
+                            </div>
+                            <WrapperInputPublish msn="Dirección:" type="text" placeholder="Colonia ..., calle ..., #123" />
                         </form>
                     </div>
                 </div>
@@ -53,7 +60,7 @@ function PublishContainer() {
                         </StyledDivFile>
                         <div className="container_description">
                             <LabelPublish msn={"Especificaciones"}></LabelPublish>
-                            <textarea rows="4" cols="50" className="input_description"></textarea>
+                            <textarea rows="5" cols="50" className="input_description"></textarea>
                         </div>
                         <div className="uplodavideo">
                             <label className="info_video" htmlFor="">Para tener mejores resultados le recomendamos que proporcione un recorrido virtual</label>
@@ -75,7 +82,7 @@ function PublishContainer() {
 }
 
 const StyledDivFile = styled.div`
-    height: 35vh;
+    height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;

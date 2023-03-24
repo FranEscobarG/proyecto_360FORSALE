@@ -13,6 +13,9 @@ import PublishProperty from '../pages/PublishProperty';
 import Register from "../pages/Register";
 import NotFound from '../pages/NotFound';
 import EspecificacionArrendatario from '../pages/EspecificacionArrendatario';
+import Pay from '../pages/Pay';
+import MyProfile from '../pages/MyProfile';
+import MyProfileTwo from '../pages/MyProfileTwo';
 
 function App() {
     return ( 
@@ -26,13 +29,16 @@ function App() {
                 <Route path="/masinfoarrendador" element={<InformacionAdicional/>} />
                 <Route path="/editarpublicacion" element={<EditPublication/>} />
                 <Route path="/publicarinmueble" element={<PublishProperty/>} />
+                <Route path="/perfilarrendador" element={<MyProfile/>} />
 
 
                 <Route path="/homearrendatario" element={<HomerArrendatario/>} />
                 <Route path="/masinfoarrendatario" element={<InformacionAdicionalTwo/>} />
                 <Route path="/misinmueblesarrendatario" element={<MisInmueblesArrendatario/>} />
+                <Route path="/perfilarrendatario" element={<MyProfileTwo/>} />
                 <Route path="/catalogofiltrado" element={<CatalogFiltered/>} />
-                <Route path="/especificacionarrendatario" element={<EspecificacionArrendatario/>} />
+                <Route path="/especificacioninmueble" element={<EspecificacionArrendatario/>} />
+                <Route path="/generacionpago" element={<Pay/>}/>
 
                 <Route path="/*" element={<NotFound/>} /> 
             </Routes>

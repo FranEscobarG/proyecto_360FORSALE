@@ -129,10 +129,7 @@ function Search({homeSearch, categories, filterCategory}) {
                         <ButtonFilter type="button" key={category}  value={category} category={category} filterCategory={filterCategory}  btnCatHome={homeSearch} funcion={handlerCatalogFiltered}  />
                     ))
                 }
-                {/* <ButtonFilter type="button" value="Catalogo" handlerClick={"handlerClick"} active />
-                <ButtonFilter type="button" value="Ventas" handlerClick={"handlerClick"} active />
-                <ButtonFilter type="button" value="Rentas" handlerClick={"handlerClick"} active />
-                <ButtonFilter type="button" value="Remates" handlerClick={"handlerClick"} active /> */}
+                
             </div>
             <div className="search">
                 <input type="search" name="" id="" className="inputSearch" placeholder=" Ingresa especificaciones del inmueble"/>

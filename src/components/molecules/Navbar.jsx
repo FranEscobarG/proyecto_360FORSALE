@@ -30,7 +30,7 @@ function Navbar({ navArrendatario }) {
                     <Link className={`link ${navArrendatario ? 'innactive' : ''}`} to="/publicarinmueble">Publicar Inmueble</Link>
                     <Link className='link' to={`${navArrendatario ? '/misinmueblesarrendatario' : '/mispublicacionesArrendador'}`} >Mis Inmuebles</Link>
                     <Link className='link' to={`${navArrendatario ? '/masinfoarrendatario   ' : '/masinfoarrendador'}`} >Más información</Link>
-                    <Link className='link' to="#" href="#">Mi perfil</Link>
+                    <Link className='link' to={`${navArrendatario ? '/perfilarrendatario   ' : '/perfilarrendador'}`} >Mi perfil</Link>
                     <button>Cerrar Sesión</button>
                 </div>
 

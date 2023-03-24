@@ -1,9 +1,11 @@
 import styled from "styled-components";
 
 const StyledButton = styled.button`
+    ${props => (props.pay) ? '' : 'height: 75px;' }
+    
     width: 90%;
     padding: 6px 10px 4px 10px;
-    margin-top: 10%;
+    margin-top: ${props => (props.pay) ? '10%' : '5%' };
     font-family: 'Harmattan';
     font-style: normal;
     font-weight: 700;

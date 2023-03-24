@@ -1,0 +1,67 @@
+.container_formpay{
+    width: 95%;
+    margin: 2% 0;
+}
+
+.formpay {
+    width: 100%;
+    min-height: 310px;
+    padding: 2% 0;
+    display: flex;
+    justify-content: space-around ;
+    background-color: #8AC5FF;
+}
+
+.pay {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+
+.container_btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 55% 45%;
+    gap: 1em;
+    margin: 1%;
+}
+.grid_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+}
+
+
+
+/* DISEÑO SE ADAPTA PARA TABLET  max-1023 */
+@media screen and (min-width:768px) and (max-width:1374px){
+    
+}
+
+
+/* DISEÑO SE ADAPTA PARA MOVIL */
+@media screen and (max-width:800px) {
+    .grid{
+        display: flex;
+        flex-direction: column;
+    }
+    .container_formpay{
+        margin: 5% 0 10%;
+    }
+    .formpay{
+        flex-direction: column;
+        align-items: center;
+        padding: 2% 0 6%;
+    }
+    .pay {
+        width: 95%;
+    }
+    .container_btn{
+        margin-top: 5%;
+    }
+}
