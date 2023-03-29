@@ -7,12 +7,12 @@ import Logo from '../../assets/img/logoSinFondo.png'
 import '../../assets/styles/InfoLogin.css'
 
 
-function FormLanding() {
+function FormIniciar() {
     const navigate = useNavigate();
 
     const handlerClick = (e)=> {
         e.preventDefault();
-        navigate("/login/arrendador");
+        navigate("/register/arrendador");
     }
 
 
@@ -20,15 +20,14 @@ function FormLanding() {
         <div className="info_landing">
             <Title>360° FOR SALE</Title>
             <img src={Logo} alt="Logo de la empresa" className="logo_register" />
-            <Label msn={"UNA PERSPECTIVA UNICA PARA TU PROXIMO HOGAR"} ></Label>
             <form>
                 <Label msn="Unete a nosotros como"></Label>
                 <Button type="button" value="Arrendador" handlerClick={handlerClick} />
 
-                <Link className="link" to="/login/arrendatario">Arrendatario</Link>
+                <Link className="link" to="/register/arrendatario">Arrendatario</Link>
             </form>
         </div>
      );
 }
 
-export default FormLanding;
+export default FormIniciar;

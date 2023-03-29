@@ -1,4 +1,5 @@
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { useContext } from 'react';
 import CatalogFiltered from '../pages/CatalogFiltered';
 import EditPublication from '../pages/EditPublication';
 import HomeArrendador from '../pages/HomeArrendador';
@@ -11,39 +12,51 @@ import MisInmueblesArrendatario from '../pages/MisInmueblesArrendatario.jsx';
 import MisPublicacionesArrendador from '../pages/MisPublicacionesArrendador';
 import PublishProperty from '../pages/PublishProperty';
 import Register from "../pages/Register";
-import NotFound from '../pages/NotFound';
 import EspecificacionArrendatario from '../pages/EspecificacionArrendatario';
 import Pay from '../pages/Pay';
 import MyProfile from '../pages/MyProfile';
 import MyProfileTwo from '../pages/MyProfileTwo';
+import NotFound from '../pages/NotFound';
+import Iniciar from '../pages/Iniciar';
+import UserContextProvider, { UserContext } from '../context/UserContext';
+import RouteProtected from './RouteProtected';
 
 function App() {
-    return ( 
+    const logged = useContext(UserContext);
+    return (
         <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<Landing/>} />
-                <Route path="/register" element={<Register/>} />
-                <Route path="/login" element={<Login/>} />
-                <Route path="/homeArrendador" element={<HomeArrendador/>} />
-                <Route path="/mispublicacionesArrendador" element={<MisPublicacionesArrendador/>} />
-                <Route path="/masinfoarrendador" element={<InformacionAdicional/>} />
-                <Route path="/editarpublicacion" element={<EditPublication/>} />
-                <Route path="/publicarinmueble" element={<PublishProperty/>} />
-                <Route path="/perfilarrendador" element={<MyProfile/>} />
+            <UserContextProvider>
+                <Routes>
+                    <Route path="/" element={<Landing />} />
+                    <Route path="/login/:typeUser" element={<Login />} />
+                    <Route path="/inicio" element={<Iniciar />} />
+                    <Route path="/register/:typeUser" element={<Register />} />
 
 
-                <Route path="/homearrendatario" element={<HomerArrendatario/>} />
-                <Route path="/masinfoarrendatario" element={<InformacionAdicionalTwo/>} />
-                <Route path="/misinmueblesarrendatario" element={<MisInmueblesArrendatario/>} />
-                <Route path="/perfilarrendatario" element={<MyProfileTwo/>} />
-                <Route path="/catalogofiltrado" element={<CatalogFiltered/>} />
-                <Route path="/especificacioninmueble" element={<EspecificacionArrendatario/>} />
-                <Route path="/generacionpago" element={<Pay/>}/>
+                    <Route path="/homearrendador" element={<HomeArrendador />} />
+                    <Route path="/mispublicacionesArrendador" element={<MisPublicacionesArrendador />} />
+                    <Route path="/masinfoarrendador" element={<InformacionAdicional />} />
+                    <Route path="/editarpublicacion" element={<EditPublication />} />
+                    <Route path="/publicarinmueble" element={<PublishProperty />} />
+                    <Route path="/perfilarrendador" element={<MyProfile />} />
 
-                <Route path="/*" element={<NotFound/>} /> 
-            </Routes>
-        </BrowserRouter>   
-     );
+
+                    <Route path="/homearrendatario" element={<HomerArrendatario />} />
+                    <Route path="/masinfoarrendatario" element={<InformacionAdicionalTwo />} />
+                    <Route path="/misinmueblesarrendatario" element={<MisInmueblesArrendatario />} />
+                    <Route path="/perfilarrendatario" element={<MyProfileTwo />} />
+                    <Route path="/catalogofiltrado" element={<CatalogFiltered />} />
+                    <Route path="/especificacioninmueble" element={<EspecificacionArrendatario />} />
+                    <Route path="/generacionpago" element={<Pay />} />
+
+                    <Route element={<RouteProtected session={logged.isLogged} />}></Route>
+
+
+                    <Route path="/*" element={<NotFound />} />
+                </Routes>
+            </UserContextProvider>
+        </BrowserRouter>
+    );
 }
 
 export default App;

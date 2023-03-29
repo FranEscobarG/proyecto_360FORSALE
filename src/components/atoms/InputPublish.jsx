@@ -10,9 +10,9 @@ const StyledInputP = styled.input`
     border-radius: 5px;
 `;
 
-function InputPublish({type, placeholder, small}) {
+function InputPublish({type, placeholder, small, name}) {
     return ( 
-        <StyledInputP type={type} placeholder={placeholder} small={small}/>
+        <StyledInputP type={type} placeholder={placeholder} small={small} name={name} />
      );
 }
 

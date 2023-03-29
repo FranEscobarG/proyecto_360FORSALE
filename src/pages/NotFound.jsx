@@ -1,10 +1,23 @@
-
 import Title from "../components/atoms/Title";
+import '../assets/styles/formRegister.css'
+import styled from "styled-components";
 
 function NotFound() {
     return ( 
-        <Title>Error: 404. Página no encontrada</Title>
+        <StyledDiv>
+            <Title>Error: 404. Página no encontrada</Title>
+        </StyledDiv>
+        
      );
 }
+
+const StyledDiv=styled.div`
+    height: 100vh;
+    width: 100%;
+    background-color: #c2e2ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`
 
 export default NotFound;

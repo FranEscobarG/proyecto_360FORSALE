@@ -19,8 +19,6 @@ function ContainerPerfil() {
         },
     ]
 
-    const user = users[0].toString();
-
 
     return (
         <>
