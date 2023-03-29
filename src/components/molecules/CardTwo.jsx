@@ -3,8 +3,14 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 function CardTwo({ img, subtitle, ruta, price, info }) {
+    const navigate = useNavigate();
+    
+    const handlerClick = () => {
+        navigate("/especificacioninmueble")
+    };
+
     return (
-        <StyledCardTwo >
+        <StyledCardTwo onClick={handlerClick} >
             <figure className='cursor_logo'>
                 <img src={img} alt="Foto del inmueble" />
             </figure>

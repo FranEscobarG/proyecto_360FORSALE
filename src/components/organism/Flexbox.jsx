@@ -10,13 +10,13 @@ function Flexbox() {
         <>
             <Subtitle>Mis Inmuebles Publicados</Subtitle>
             <StyledFlexbox>
-                <Card img={MiInmueble2} subtitle="Rancho San Agustin" ruta="#" />
-                <Card img={MiInmueble1} subtitle="Departamento en Real del Bosque" ruta="#" />
-                <Card img={MiInmueble3} subtitle="Casa con alberca" ruta="#" />
+                <Card img={MiInmueble2} subtitle="Rancho San Agustin" ruta="#"  />
+                <Card img={MiInmueble1} subtitle="Departamento en Real del Bosque" ruta="#"  />
+                <Card img={MiInmueble3} subtitle="Casa con alberca" ruta="#"  />
 
-                <Card img={MiInmueble2} subtitle="Rancho San Agustin" ruta="#" />
-                <Card img={MiInmueble1} subtitle="Departamento en Real del Bosque" ruta="#" />
-                <Card img={MiInmueble3} subtitle="Casa con alberca" ruta="#" />
+                <Card img={MiInmueble2} subtitle="Rancho San Agustin" ruta="#"  />
+                <Card img={MiInmueble1} subtitle="Departamento en Real del Bosque" ruta="#"  />
+                <Card img={MiInmueble3} subtitle="Casa con alberca" ruta="#"  />
             </StyledFlexbox>
         </>
         
