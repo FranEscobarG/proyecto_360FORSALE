@@ -7,8 +7,15 @@ import Img3Especificacion from '../../assets/img/imgCarrusel3.jpg'
 import Img4Especificacion from '../../assets/img/imgCarrusel4.jpg'
 import Img5Especificacion from '../../assets/img/imgCarrusel5.jpg'
 import '../../assets/styles/containerEspecificacionArrendatario.css'
+import { useNavigate } from "react-router-dom";
 
 function ContainerEspecificacionArrendatario() {
+    const navigate = useNavigate();
+
+    const redirecRefPago = () => {
+        navigate("/generacionpago")
+    };
+
     return (
         <>
             <div className='container_especificacion'>
@@ -23,7 +30,7 @@ function ContainerEspecificacionArrendatario() {
                         <img className="ImgDemostrativa" src={Img4Especificacion} alt="imagen del inmoviliario interesado" />
                     </div>
                 </div>
-                
+
                 <div className="grid2">
                     <div className="especificacion">
                         <Subtitle>Titulo del inmueble en venta o renta</Subtitle>
@@ -58,6 +65,10 @@ function ContainerEspecificacionArrendatario() {
                         </div>
                     </div>
                 </div>
+
+            </div>
+            <div className="container_Buttons">
+                <input className="button" type="button" value="Comprar" onClick={redirecRefPago}></input>
             </div>
         </>
     );

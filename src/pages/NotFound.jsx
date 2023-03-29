@@ -14,7 +14,7 @@ function NotFound() {
 const StyledDiv=styled.div`
     height: 100vh;
     width: 100%;
-    background-color: #c2e2ff;
+    background-color: #2c0a7e;
     display: flex;
     align-items: center;
     justify-content: center;
